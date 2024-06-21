@@ -1,6 +1,6 @@
 class apache::params {
     $install_ensure = 'present'
-    case $::osfamily {
+    case $facts['os']['family'] {
         'RedHat': {
             $install_name = 'httpd'
         }
