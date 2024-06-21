@@ -7,8 +7,8 @@
 class apache::install (
     $install_name = $apache::params::install_name,
     $install_ensure = $apache::params::install_ensure,
-) {
-    package { $install_name:
+) inherits apache::params {
+    package { "{$install_name}":
         ensure => $install_ensure,
     }
 }
