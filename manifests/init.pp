@@ -13,4 +13,7 @@ class apache (
 ) {
     contain apache::install
     contain apache::config
+
+    Class['::apache::install']
+    -> Class['::apache::config']
 }
