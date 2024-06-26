@@ -1,3 +1,10 @@
+# @example
+# apache::vhosts { 'puppet_project':
+#     port => 80,
+#     subdomain => 'puppetproject',
+#     admin => 'admin@mylabserver.com',
+#     docroot => '/var/www/html/puppetproject',
+# }
 define apache::vhosts (
     Integer   $port,
     String[1] $subdomain,
